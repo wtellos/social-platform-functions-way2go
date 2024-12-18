@@ -169,6 +169,13 @@ function send_message_button_shortcode() {
         });
     }
     </script>
+    <script>
+        function notifyLoginRequired() {
+            const message = `You need to log in to send a message!`;
+            UIkit.notification({message: message, status: 'warning'});
+
+        }
+    </script>
     <?php
     return ob_get_clean();
 }
